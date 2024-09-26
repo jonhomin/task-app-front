@@ -46,4 +46,4 @@ lint:
 
 # プロジェクトのディレクトリ構造を表示
 tree:
-	@tree -L 2 -I 'node_modules|build|coverage'
+	@tree -I 'node_modules|build|coverage'
