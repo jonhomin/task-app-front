@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 interface HeaderProps {
@@ -7,14 +8,19 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
   const handleLogout = () => {
-    // ログアウト処理をここに実装
+    // ここに実際のログアウト処理を実装します（例：トークンの削除など）
     console.log('Logout clicked');
+    
+    // ログイン画面へ遷移
+    navigate('/auth/login');
+    
     setIsDropdownOpen(false);
   };
 
