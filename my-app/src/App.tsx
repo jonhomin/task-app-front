@@ -1,11 +1,14 @@
 import React from 'react';
+import Layout from './components/layout/Layout';
+import Dashboard from './components/dashboard/Dashboard';
+import './styles/global.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <Layout>
+      <Dashboard />
+    </Layout>
   );
-}
+};
 
 export default App;
